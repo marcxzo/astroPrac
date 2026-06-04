@@ -1,5 +1,14 @@
 ---
+const pageTitle = "About Me";
 
+const identity = {
+  firstName: "M",
+  country: "US",
+  occupation: "Student",
+  hobbies: ["Piano", "MMA", "Gaming"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <html lang="en">
@@ -9,7 +18,7 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<section>
@@ -17,13 +26,26 @@
 				<h1>About me</h1>
 				<h2>I am currently learning Astro framework by following the tutorial on their website</h2>
 				<p>more stuff will be added here over the course of my learning lmao</p>
+
+				<p>Here are a few facts about me:</p>
+				<ul>
+					<li>My name is {identity.firstName}.</li>
+					<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+					{identity.hobbies.length >= 2 &&
+						<li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+					}
+				</ul>
+				<p>My skills are:</p>
+				<ul>
+					{skills.map((skill) => <li>{skill}</li>)}
+				</ul>
 			</div>
 			
 			<div class="container">
 				<nav>
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="/about">About</a></li>
+						<li><a href="/about">{pageTitle}</a></li>
 						<li><a href="/blog">Blog</a></li>
 					</ul>
 				</nav>
