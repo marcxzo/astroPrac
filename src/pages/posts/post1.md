@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/markdownpostlayout.astro
 
 title: 'My First Blog Post'
 pubDate: 2026-06-04
