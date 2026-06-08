@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-const pageTitle = "About Me";
+
 
 const identity = {
   firstName: "M",
@@ -19,8 +19,9 @@ const skillColor = "crimson";
 const fontWeight = "bold";
 const textCase = "uppercase";
 import BaseLayout from '../layouts/baselayout.astro';
+const pageTitle = "About Me";
 ---
-<BaseLayout pageTitle = {pageTitle}>
+<BaseLayout pageTitle={pageTitle}>
 	<style define:vars={{skillColor, fontWeight, textCase}}>
 			h1 {
 				color: purple;
